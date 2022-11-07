@@ -59,5 +59,6 @@ struct Proposal {
 }
 // Create a mapping of ID to Proposal
 mapping(uint256 => Proposal) public proposals;
+// Number of proposals that have been created
 uint256 public numPropos
 }
