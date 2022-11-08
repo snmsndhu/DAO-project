@@ -172,4 +172,10 @@ function executeProposal(uint256 proposalIndex)
 function withdrawEther() external onlyOwner {
     payable(owner()).transfer(address(this).balance);
 }
+// The following two functions allow the contract to accept ETH deposits
+// directly from a wallet without calling a function
+receive() external payable {}
+
+fallback() external payable {}
+
 }
