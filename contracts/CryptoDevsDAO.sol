@@ -101,5 +101,10 @@ modifier activeProposalOnly(uint256 proposalIndex) {
     );
     _;
 }
+// Create an enum named Vote containing possible options for a vote
+enum Vote {
+    YAY, // YAY = 0
+    NAY // NAY = 1
+}
 
 }
