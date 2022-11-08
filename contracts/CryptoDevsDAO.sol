@@ -61,4 +61,11 @@ struct Proposal {
 mapping(uint256 => Proposal) public proposals;
 // Number of proposals that have been created
 uint256 public numPropos
+
+// Create a payable constructor which initializes the contract
+// instances for FakeNFTMarketplace and CryptoDevsNFT
+// The payable allows this constructor to accept an ETH deposit when it is being deployed
+constructor(address _nftMarketplace, address _cryptoDevsNFT) payable {
+    nftMarketplace = IFakeNFTMarketplace(_nftMarketplace);
+    cryptoDevsNFT = ICryptoDevsNFT(_cryptoDevsNFT);
 }
